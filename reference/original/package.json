@@ -1,0 +1,37 @@
+{
+  "name": "@typen/original",
+  "version": "0.0.0",
+  "description": "A data type checker and converter",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "pub": "npm publish",
+    "test": "node test/util/test-main.js",
+    "test-jest": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoyeungw/typen.git"
+  },
+  "keywords": [
+    "table",
+    "cross table",
+    "bi",
+    "insight",
+    "analytic"
+  ],
+  "author": {
+    "name": "Hoyeung Wong",
+    "email": "hoyeungw@outlook.com",
+    "url": "https://github.com/hoyeungw"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hoyeungw/typen"
+  },
+  "homepage": "https://github.com/hoyeungw/typen#readme",
+  "gitHead": "83ecf391bbd64c8979e08e8ba32f988aaf0d4633"
+}

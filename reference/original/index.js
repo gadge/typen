@@ -1,0 +1,7 @@
+// export { Typ } from './src/typ'
+// export { Num } from './src/num'
+// export { NumLoose } from './src/numLoose'
+// export { check } from './src/check'
+export { T } from './src/T'
+export { UND, BOO, NUM, BIG, STR, OBJ, FUN, ARR, MAP, SET } from './src/enums.brief'
+export { UNDEFINED, BOOLEAN, NUMBER, BIGINT, STRING, OBJECT, FUNCTION, ARRAY, NULL, } from './src/enums.full'

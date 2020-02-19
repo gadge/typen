@@ -23,7 +23,7 @@ $ npm install @typen/<tool-name>
 
 |                           |                         |
 | ------------------------- | ----------------------- |
-| [num](packages/deco)     | Stringify a json        |
+| [enums](packages/enums)     | Enums of types        |
 |                           |                         |
 
 ## License
