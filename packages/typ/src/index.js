@@ -1,4 +1,8 @@
-export const OptS = Object.prototype.toString
+/**
+ *
+ * @type {Function|function(*):string}
+ */
+export const protoType = Function.prototype.call.bind(Object.prototype.toString)
 
 /**
  * const rxObj = /^\[object (.*)]$/
@@ -6,4 +10,4 @@ export const OptS = Object.prototype.toString
  * @param {*} o
  * @return {string}
  */
-export const typ = o => OptS.call(o).slice(8, -1)
+export const typ = o => protoType(o).substring(8, -1)

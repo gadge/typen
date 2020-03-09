@@ -8,7 +8,7 @@ export {
   OBJ,
   FUN,
   SYM,
-} from './resources/enums.typeof'
+} from '@typen/enum-data-types'
 
 export {
   NULL,
@@ -23,5 +23,5 @@ export {
   BIGINT,
   FUNCTION,
   SYMBOL,
-} from './resources/enums.object'
+} from '@typen/enum-object-types'
 

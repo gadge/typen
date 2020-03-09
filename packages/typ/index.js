@@ -1,1 +1,1 @@
-export { typ, OptS } from './src/index'
+export { typ, protoType } from './src/index'

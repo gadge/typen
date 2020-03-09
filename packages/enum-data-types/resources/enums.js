@@ -1,5 +1,4 @@
 // from x => typeof x
-
 export const NUL = 'null'
 export const UND = 'undefined'
 export const BOO = 'boolean'

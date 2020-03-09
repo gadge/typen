@@ -1,7 +1,7 @@
 {
-  "name": "@typen/enums",
+  "name": "@typen/bool",
   "version": "0.0.1",
-  "description": "A type cheker",
+  "description": "Bool parser",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "files": [
@@ -15,7 +15,6 @@
     "test": "node -r @babel/register test/object.type.test.js"
   },
   "dependencies": {
-    "@typen/enum-object-types": "^0.0.1",
     "@typen/enum-data-types": "^0.0.1"
   },
   "repository": {

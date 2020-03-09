@@ -18,6 +18,10 @@
     "type": "git",
     "url": "git+https://github.com/hoyeungw/typen.git"
   },
+  "dependencies": {
+    "@typen/enum-data-types": "^0.0.1",
+    "@typen/typ": "^0.0.1"
+  },
   "keywords": [
     "type",
     "prototype",

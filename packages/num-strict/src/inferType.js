@@ -1,4 +1,4 @@
-import { NUM, OBJ, STR } from '@typen/enums'
+import { NUM, OBJ, STR } from '@typen/enum-data-types'
 import { typ } from '@typen/typ'
 import { isNumeric } from './isNumeric'
 

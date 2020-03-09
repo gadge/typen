@@ -1,5 +1,5 @@
 {
-  "name": "@typen/enums",
+  "name": "@typen/enum-object-types",
   "version": "0.0.1",
   "description": "A type cheker",
   "main": "dist/index.cjs.js",
@@ -13,10 +13,6 @@
   "scripts": {
     "pub": "npm publish",
     "test": "node -r @babel/register test/object.type.test.js"
-  },
-  "dependencies": {
-    "@typen/enum-object-types": "^0.0.1",
-    "@typen/enum-data-types": "^0.0.1"
   },
   "repository": {
     "type": "git",
