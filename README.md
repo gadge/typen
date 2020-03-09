@@ -1,46 +1,60 @@
 # @typen
+
 :blowfish: Type checker
 
-[![npm version][npm-image]][npm-url]
-[![npm quality][quality-image]][quality-url]
-[![npm download][download-image]][npm-url]
-[![npm total-download][total-download-image]][npm-url]
-[![github commit activity][commit-image]][github-url]
-[![npm license][license-image]][npm-url]
 
-## Features
+[![npm version][badge-npm-version]][url-npm]
+[![github commit last][badge-github-last-commit]][url-github]
+[![github commit total][badge-github-commit-count]][url-github]
+[![npm license][badge-npm-license]][url-npm]
 
-- Use out-of-box
-- ES2015 syntax
+[//]: <> (Shields)
+[badge-npm-version]: https://flat.badgen.net/npm/v/@typen/typ
+[badge-npm-license]: https://flat.badgen.net/npm/license/@typen/typ
+[badge-github-last-commit]: https://flat.badgen.net/github/last-commit/hoyeungw/typen
+[badge-github-commit-count]: https://flat.badgen.net/github/commits/hoyeungw/typen
 
-## Install
+[//]: <> (Link)
+[url-github]: https://github.com/hoyeungw/typen
+[url-npm]: https://npmjs.org/package/@typen/typ
+
+#### Features
+
+- Check primitive or object type of a variable in one function.
+- Check whether a variable is numeric in different strictness (and different overhead).
+- Parse variable to boolean.
+- Check type of an array.
+- Lightweight and fast.
+- ES-module support.
+
+#### Install
 
 ```console
 $ npm install @typen/<tool-name>
 ```
 
-## Tools
+#### Tools
 
-|                           |                         |
-| ------------------------- | ----------------------- |
-| [enums](packages/enums)     | Enums of types        |
-|                           |                         |
+|                                                     |                                                         |                            |
+| --------------------------------------------------- | ------------------------------------------------------- | -------------------------- |
+| [**typ**](packages/typ)                             | shorthand for Object.prototype.toString.call()          | ![v][typ-dm]               |
+| [**bool**](packages/bool)                           | parse input to boolean, e.g. 'false' be parsed to false | ![v][bool-dm]              |
+| [**num-loose**](packages/num-loose)                 | isNumeric in a loose check                              | ![v][num-loose-dm]         |
+| [**num-strict**](packages/num-strict)               | isNumeric in a stricter check                           | ![v][num-strict-dm]        |
+| [**vector-type**](packages/vector-type)             | check type of an array                                  | ![v][vector-type-dm]       |
+| [**enum-data-types**](packages/enum-data-types)     | types returned by typeof                                | ![v][enum-data-types-dm]   |
+| [**enum-object-types**](packages/enum-object-types) | types returned by Object.prototype.toString.call()      | ![v][enum-object-types-dm] |
+|                                                     |                                                         |                            |
 
-## License
+[//]: <> (Local routes)
+[typ-dm]: https://flat.badgen.net/npm/dm/@typen/typ
+[bool-dm]: https://flat.badgen.net/npm/dm/@typen/bool
+[num-loose-dm]: https://flat.badgen.net/npm/dm/@typen/num-loose
+[num-strict-dm]: https://flat.badgen.net/npm/dm/@typen/num-strict
+[vector-type-dm]: https://flat.badgen.net/npm/dm/@typen/vector-type
+[enum-data-types-dm]: https://flat.badgen.net/npm/dm/@typen/enum-data-types
+[enum-object-types-dm]: https://flat.badgen.net/npm/dm/@typen/enum-object-types
 
-[MIT](http://opensource.org/licenses/MIT)
+#### Meta
 
-Copyright (c) 2019-present, Haoyang (Vincent) Wang
-
-[//]: <> (Shields)
-[npm-image]: https://img.shields.io/npm/v/@typen.svg?style=flat-square
-[quality-image]: http://npm.packagequality.com/shield/@typen.svg?style=flat-square
-[download-image]: https://img.shields.io/npm/dm/@typen.svg?style=flat-square
-[total-download-image]:https://img.shields.io/npm/dt/@typen.svg?style=flat-square
-[license-image]: https://img.shields.io/npm/l/@typen.svg?style=flat-square
-[commit-image]: https://img.shields.io/github/commit-activity/y/hoyeungw/@typen?style=flat-square
-
-[//]: <> (Link)
-[npm-url]: https://npmjs.org/package/@typen
-[quality-url]: http://packagequality.com/#?package=@typen
-[github-url]: https://github.com/hoyeungw/@typen
+[LICENSE (MIT)](LICENSE)
