@@ -1,6 +1,6 @@
 {
   "name": "@typen/vector-type",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A type cheker",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -15,9 +15,9 @@
     "test": "node -r @babel/register test/object.type.test.js"
   },
   "dependencies": {
-    "@typen/enum-data-types": "^0.0.2",
-    "@typen/num-strict": "^0.0.2",
-    "@typen/typ": "^0.0.2"
+    "@typen/enum-data-types": "^0.0.3",
+    "@typen/num-strict": "^0.0.3",
+    "@typen/typ": "^0.0.3"
   },
   "repository": {
     "type": "git",
