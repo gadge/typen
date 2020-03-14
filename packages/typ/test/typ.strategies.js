@@ -15,7 +15,7 @@ const { lapse, result } = strategies({
   methods: {
     bench: x => x,
     stable: x => PS.call(x),
-    edge: x => protoType(x).substring(8, -1),
+    edge: x => protoType(x).slice(8, -1),
     dev: x => PS.call(x).slice(8, -1),
     native: x => typeof x,
   }

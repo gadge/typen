@@ -10,4 +10,4 @@ export const protoType = Function.prototype.call.bind(Object.prototype.toString)
  * @param {*} o
  * @return {string}
  */
-export const typ = o => protoType(o).substring(8, -1)
+export const typ = o => protoType(o).slice(8, -1)
