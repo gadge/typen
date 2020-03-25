@@ -11,5 +11,6 @@ export {
   BIGINT,
   FUNCTION,
   SYMBOL,
+  DATE
 } from './resources/enums'
 

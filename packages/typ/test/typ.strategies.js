@@ -4,13 +4,14 @@ import { Basics } from '../../../reference/foobar'
 import { makeEmbedded } from '@foba/util'
 
 const basics = Basics
+basics.date = new Date()
 delete basics.bigint
 export const PS = Object.prototype.toString
 
 const protoType = Function.prototype.call.bind(Object.prototype.toString)
 
 const { lapse, result } = strategies({
-  repeat: 1E+7,
+  repeat: 1E+5,
   candidates: Basics |> makeEmbedded,
   methods: {
     bench: x => x,
