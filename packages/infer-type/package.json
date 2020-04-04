@@ -1,7 +1,7 @@
 {
-  "name": "@typen/vector-type",
+  "name": "@typen/infer-type",
   "version": "0.0.4",
-  "description": "Check type for array",
+  "description": "Infer type",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "files": [
@@ -16,10 +16,8 @@
   },
   "dependencies": {
     "@typen/enum-data-types": "^0.0.4",
-    "@typen/enum-tabular-types": "^0.0.4",
-    "@typen/infer-type": "^0.0.4",
     "@typen/num-strict": "^0.0.4",
-    "@vect/vector-mapper": "^0.2.0"
+    "@typen/typ": "^0.0.4"
   },
   "repository": {
     "type": "git",
@@ -27,8 +25,8 @@
   },
   "keywords": [
     "type",
-    "prototype",
-    "numeric"
+    "infer type",
+    "prototype"
   ],
   "author": "Hoyeung Wong",
   "license": "MIT",

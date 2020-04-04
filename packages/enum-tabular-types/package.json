@@ -1,7 +1,7 @@
 {
-  "name": "@typen/vector-type",
+  "name": "@typen/enum-tabular-types",
   "version": "0.0.4",
-  "description": "Check type for array",
+  "description": "Enums for tabular types",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "files": [
@@ -14,13 +14,6 @@
     "pub": "npm publish",
     "test": "node -r @babel/register test/object.type.test.js"
   },
-  "dependencies": {
-    "@typen/enum-data-types": "^0.0.4",
-    "@typen/enum-tabular-types": "^0.0.4",
-    "@typen/infer-type": "^0.0.4",
-    "@typen/num-strict": "^0.0.4",
-    "@vect/vector-mapper": "^0.2.0"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hoyeungw/typen.git"
@@ -28,6 +21,7 @@
   "keywords": [
     "type",
     "prototype",
+    "tabular",
     "numeric"
   ],
   "author": "Hoyeung Wong",
