@@ -1,8 +1,8 @@
 import { iterate } from '@vect/vector-mapper'
-import { inferType as inferTypeStrict } from '@typen/num-strict'
+import { inferTypeNaive } from '@typen/infer-type'
 
-export const InferTypes = (inferFn) => {
-  return inferTypes.bind(inferFn)
+export const InferTypes = (inferType) => {
+  return inferTypes.bind(inferType)
 }
 
 /**
@@ -12,11 +12,19 @@ export const InferTypes = (inferFn) => {
  * @returns {[any, any][]|[]|any[]|*}
  */
 export const inferTypes = function (vec, l) {
-  const inferFn = this ?? inferTypeStrict
-  let o
-  return (l = vec?.length) === (l & 0x7f)
-    ? (o = [], iterate(vec, mapDistinctV.bind(o, inferFn), l), o)
-    : (o = {}, iterate(vec, mapDistinctO.bind(o, inferFn), l), Object.keys(o))
+  const typ = this.inferType ?? inferTypeNaive
+  const { omitNull } = this
+  let o, nullish = false
+  const distinct = (l = vec?.length) === (l & 0x7f)
+    ? (o = [], iterate(vec, x => {
+      if (omitNull && x === null || x === void 0) { nullish = x }
+      else if (o.indexOf(x = typ(x)) < 0) { o.push(x) }
+    }, l), o)
+    : (o = {}, iterate(vec, x => {
+      if (omitNull && x === null || x === void 0) { nullish = x }
+      else if (!((x = typ(x)) in o)) { o[x] = void 0 }
+    }, l), Object.keys(o))
+  return distinct.length ? distinct : [nullish]
 }
 
 const mapDistinctV = function (fn, x) {

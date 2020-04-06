@@ -6,14 +6,21 @@ import { InferType } from '@typen/infer-type'
 import { isNumeric } from '@typen/num-strict'
 import { NUM } from '@typen/enum-data-types'
 
-const mixed = NumberVectorCollection.flopShuffle({})
-mixed[1] = mixed[1].toString()
-const candidates = Object.assign({ mixed },
+const mixedAlpha = NumberVectorCollection.flopShuffle({})
+const mixedBeta = NumberVectorCollection.flopShuffle({})
+
+mixedAlpha[1] = mixedAlpha[1].toString()
+mixedAlpha[mixedBeta.length - 1] = null
+mixedBeta[1] = null
+mixedBeta[mixedBeta.length - 1] = undefined
+const empty = []
+
+const candidates = Object.assign({ empty, mixedAlpha, mixedBeta },
   NumberVectorCollection.flopShuffle({ keyed: true }),
   StringVectorCollection.flopShuffle({ keyed: true }),
 )
 
-const vecType = VectorType(InferType({ isNumeric: isNumeric, numstr: NUM }))
+const vecType = VectorType({ inferType: InferType({ isNumeric: isNumeric, numstr: NUM }), omitNull: true })
 for (const [key, vec] of Object.entries(candidates)) {
   xr().elements(vec |> deco).type(vecType(vec)) |> says[key]
 }
