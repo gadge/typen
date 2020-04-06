@@ -14,14 +14,14 @@ export const InferTypes = (inferType) => {
 export const inferTypes = function (vec, l) {
   const typ = this.inferType ?? inferTypeNaive
   const { omitNull } = this
-  let o, nullish = false
+  let o, nullish = null
   const distinct = (l = vec?.length) === (l & 0x7f)
     ? (o = [], iterate(vec, x => {
-      if (omitNull && x === null || x === void 0) { nullish = x }
+      if (omitNull && (x === null || x === void 0)) { nullish = x }
       else if (o.indexOf(x = typ(x)) < 0) { o.push(x) }
     }, l), o)
     : (o = {}, iterate(vec, x => {
-      if (omitNull && x === null || x === void 0) { nullish = x }
+      if (omitNull && (x === null || x === void 0)) { nullish = x }
       else if (!((x = typ(x)) in o)) { o[x] = void 0 }
     }, l), Object.keys(o))
   return distinct.length ? distinct : [nullish]
