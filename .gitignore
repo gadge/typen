@@ -1,6 +1,3 @@
 .idea
-resources/temp
 node_modules
 yarn.lock
-packages/*/dist
-cliche/*/dist
