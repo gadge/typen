@@ -1,6 +1,6 @@
 {
   "name": "@typen/bool",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Bool parser",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -15,7 +15,7 @@
     "test": "node -r @babel/register test/object.type.test.js"
   },
   "dependencies": {
-    "@typen/enum-data-types": "^0.0.5"
+    "@typen/enum-data-types": "^0.0.6"
   },
   "repository": {
     "type": "git",
