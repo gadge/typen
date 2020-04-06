@@ -1,10 +1,6 @@
 import { iterate } from '@vect/vector-mapper'
 import { inferTypeNaive } from '@typen/infer-type'
 
-export const InferTypes = (inferType) => {
-  return inferTypes.bind(inferType)
-}
-
 /**
  *
  * @param {*[]} vec
@@ -12,19 +8,30 @@ export const InferTypes = (inferType) => {
  * @returns {[any, any][]|[]|any[]|*}
  */
 export const inferTypes = function (vec, l) {
-  const typ = this.inferType ?? inferTypeNaive
-  const { omitNull } = this
+  const inferType = this.inferType ?? inferTypeNaive
+  const omitNull = this.omitNull
   let o, nullish = null
   const distinct = (l = vec?.length) === (l & 0x7f)
     ? (o = [], iterate(vec, x => {
       if (omitNull && (x === null || x === void 0)) { nullish = x }
-      else if (o.indexOf(x = typ(x)) < 0) { o.push(x) }
+      else if (o.indexOf(x = inferType(x)) < 0) { o.push(x) }
     }, l), o)
     : (o = {}, iterate(vec, x => {
       if (omitNull && (x === null || x === void 0)) { nullish = x }
-      else if (!((x = typ(x)) in o)) { o[x] = void 0 }
+      else if (!((x = inferType(x)) in o)) { o[x] = void 0 }
     }, l), Object.keys(o))
   return distinct.length ? distinct : [nullish]
+}
+
+/**
+ *
+ * @param {Object} config
+ * @param {Function} [config.inferType]
+ * @param {boolean} [config.omitNull]
+ * @return Function
+ */
+export const InferTypes = (config) => {
+  return inferTypes.bind(config)
 }
 
 const mapDistinctV = function (fn, x) {

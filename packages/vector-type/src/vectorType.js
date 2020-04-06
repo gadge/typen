@@ -9,13 +9,21 @@ import { inferTypes } from './inferTypes'
  */
 export function vectorType (vec) {
   if (!vec?.length) return NUL
-  const types = inferTypes.call(this, vec)
+  const config = this
+  const types = inferTypes.call(config, vec)
   if (types.length === 1) return types[0]
   if (types.length === 2 && types.includes(NUM) && types.includes(NUMSTR)) return NUMSTR
   return MISC
 }
 
-export const VectorType = ({ inferType, omitNull } = {}) => {
-  return vectorType.bind({ inferType, omitNull })
+/**
+ *
+ * @param {Object} config
+ * @param {Function} [config.inferType]
+ * @param {boolean} [config.omitNull]
+ * @return Function
+ */
+export const VectorType = (config = {}) => {
+  return vectorType.bind(config)
 }
 
