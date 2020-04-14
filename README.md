@@ -39,6 +39,7 @@ $ npm install @typen/<tool-name>
 | --------------------------------------------------- | ------------------------------------------------------- | -------------------------- |
 | [**typ**](packages/typ)                             | shorthand for Object.prototype.toString.call()          | ![v][typ-dm]               |
 | [**bool**](packages/bool)                           | parse input to boolean, e.g. 'false' be parsed to false | ![v][bool-dm]              |
+| [**nullish**](packages/nullish)                     | check if input is null or undefined                     | ![v][nullish-dm]           |
 | [**num-loose**](packages/num-loose)                 | isNumeric in a loose check                              | ![v][num-loose-dm]         |
 | [**num-strict**](packages/num-strict)               | isNumeric in a stricter check                           | ![v][num-strict-dm]        |
 | [**vector-type**](packages/vector-type)             | check type of an array                                  | ![v][vector-type-dm]       |
@@ -49,6 +50,7 @@ $ npm install @typen/<tool-name>
 [//]: <> (Local routes)
 [typ-dm]: https://flat.badgen.net/npm/dm/@typen/typ
 [bool-dm]: https://flat.badgen.net/npm/dm/@typen/bool
+[nullish-dm]: https://flat.badgen.net/npm/dm/@typen/nullish
 [num-loose-dm]: https://flat.badgen.net/npm/dm/@typen/num-loose
 [num-strict-dm]: https://flat.badgen.net/npm/dm/@typen/num-strict
 [vector-type-dm]: https://flat.badgen.net/npm/dm/@typen/vector-type
