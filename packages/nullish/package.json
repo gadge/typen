@@ -1,6 +1,6 @@
 {
   "name": "@typen/nullish",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "description": "Nullish checker",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -13,8 +13,6 @@
   "scripts": {
     "pub": "npm publish",
     "test": "node -r @babel/register test/object.type.test.js"
-  },
-  "dependencies": {
   },
   "repository": {
     "type": "git",
