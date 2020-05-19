@@ -1,6 +1,6 @@
 {
   "name": "@typen/infer-type",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Infer type",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -15,9 +15,9 @@
     "test": "node -r @babel/register test/object.type.test.js"
   },
   "dependencies": {
-    "@typen/enum-data-types": "^0.1.0",
-    "@typen/num-strict": "^0.1.0",
-    "@typen/typ": "^0.1.0"
+    "@typen/enum-data-types": "^0.1.1",
+    "@typen/num-strict": "^0.1.1",
+    "@typen/typ": "^0.1.1"
   },
   "repository": {
     "type": "git",
