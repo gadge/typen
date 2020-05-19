@@ -1,7 +1,7 @@
-import { Chrono } from 'elprimero'
-import { CrosTabX } from 'xbrief'
-import { makeEmbedded } from '@foba/util'
-import { Arrays, Numerics, Strings } from '@typen/foobar'
+import { makeEmbedded }                   from '@foba/util'
+import { Chrono }                         from 'elprimero'
+import { CrosTabX }                       from 'xbrief'
+import { Arrays, Numerics, Strings }      from '../../../reference/foobar'
 import { inferType, isNumeric, parseNum } from '../index'
 
 const { lapse, result } = Chrono.strategies({
