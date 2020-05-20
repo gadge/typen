@@ -1,1 +1,1 @@
-export { LITERAL, literal, isString } from './src/literal'
+export { LITERAL, isLiteral, isString } from './src/literal'
