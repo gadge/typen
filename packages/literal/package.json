@@ -1,0 +1,36 @@
+{
+  "name": "@typen/literal",
+  "version": "0.1.1",
+  "description": "Nullish checker",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "pub": "npm publish",
+    "test": "node -r @babel/register test/object.type.test.js"
+  },
+  "dependencies": {
+    "@typen/enum-data-types": "^0.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoyeungw/typen.git"
+  },
+  "keywords": [
+    "type",
+    "literal",
+    "null",
+    "undefined"
+  ],
+  "author": "Hoyeung Wong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hoyeungw/typen"
+  },
+  "homepage": "https://github.com/hoyeungw/typen#readme"
+}
