@@ -1,6 +1,6 @@
 {
   "name": "@typen/num-loose",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A type cheker",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -19,8 +19,8 @@
     "url": "git+https://github.com/hoyeungw/typen.git"
   },
   "dependencies": {
-    "@typen/enum-data-types": "^0.1.3",
-    "@typen/typ": "^0.1.3"
+    "@typen/enum-data-types": "^0.1.4",
+    "@typen/typ": "^0.1.4"
   },
   "keywords": [
     "type",

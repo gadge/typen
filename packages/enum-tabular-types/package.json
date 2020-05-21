@@ -1,6 +1,6 @@
 {
   "name": "@typen/enum-tabular-types",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Enums for tabular types",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
