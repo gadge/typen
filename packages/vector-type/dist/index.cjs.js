@@ -4,8 +4,8 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 var enumDataTypes = require('@typen/enum-data-types');
 var enumTabularTypes = require('@typen/enum-tabular-types');
-var vectorMapper = require('@vect/vector-mapper');
 var inferType = require('@typen/infer-type');
+var vectorMapper = require('@vect/vector-mapper');
 
 /**
  *
@@ -22,17 +22,9 @@ const inferTypes = function (vec, l) {
   let o,
       nullish = null;
   const distinct = (l = vec === null || vec === void 0 ? void 0 : vec.length) === (l & 0x7f) ? (o = [], vectorMapper.iterate(vec, x => {
-    if (omitNull && (x === null || x === void 0)) {
-      nullish = x;
-    } else if (o.indexOf(x = inferType$1(x)) < 0) {
-      o.push(x);
-    }
+    if (omitNull && nullish(x)) nullish = x;else if (o.indexOf(x = inferType$1(x)) < 0) o.push(x);
   }, l), o) : (o = {}, vectorMapper.iterate(vec, x => {
-    if (omitNull && (x === null || x === void 0)) {
-      nullish = x;
-    } else if (!((x = inferType$1(x)) in o)) {
-      o[x] = void 0;
-    }
+    if (omitNull && nullish(x)) nullish = x;else if (!((x = inferType$1(x)) in o)) o[x] = void 0;
   }, l), Object.keys(o));
   return distinct.length ? distinct : [nullish];
 };

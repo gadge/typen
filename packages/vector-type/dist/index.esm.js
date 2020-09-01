@@ -1,7 +1,7 @@
 import { NUL, NUM } from '@typen/enum-data-types';
 import { NUMSTR, MISC } from '@typen/enum-tabular-types';
-import { iterate } from '@vect/vector-mapper';
 import { inferTypeNaive } from '@typen/infer-type';
+import { iterate } from '@vect/vector-mapper';
 
 /**
  *
@@ -18,17 +18,9 @@ const inferTypes = function (vec, l) {
   let o,
       nullish = null;
   const distinct = (l = vec === null || vec === void 0 ? void 0 : vec.length) === (l & 0x7f) ? (o = [], iterate(vec, x => {
-    if (omitNull && (x === null || x === void 0)) {
-      nullish = x;
-    } else if (o.indexOf(x = inferType(x)) < 0) {
-      o.push(x);
-    }
+    if (omitNull && nullish(x)) nullish = x;else if (o.indexOf(x = inferType(x)) < 0) o.push(x);
   }, l), o) : (o = {}, iterate(vec, x => {
-    if (omitNull && (x === null || x === void 0)) {
-      nullish = x;
-    } else if (!((x = inferType(x)) in o)) {
-      o[x] = void 0;
-    }
+    if (omitNull && nullish(x)) nullish = x;else if (!((x = inferType(x)) in o)) o[x] = void 0;
   }, l), Object.keys(o));
   return distinct.length ? distinct : [nullish];
 };
