@@ -8,4 +8,5 @@ export {
   OBJ,
   FUN,
   SYM,
+  DEF,
 } from './resources/enums'

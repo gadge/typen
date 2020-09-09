@@ -12,9 +12,11 @@ const STR = 'string';
 const OBJ = 'object';
 const FUN = 'function';
 const SYM = 'symbol';
+const DEF = 'default';
 
 exports.BIG = BIG;
 exports.BOO = BOO;
+exports.DEF = DEF;
 exports.FUN = FUN;
 exports.NUL = NUL;
 exports.NUM = NUM;
