@@ -1,5 +1,5 @@
-import { BOO, NUM, STR } from '@typen/enum-data-types'
-import { FLOAT, RATIO } from '@typen/enum-tabular-types'
+import { BOO, NUM, STR, }    from '@typen/enum-data-types'
+import { FLOAT, INT, RATIO } from '@typen/enum-tabular-types'
 
 export const selectParser = (typeName) => {
   switch (typeName) {

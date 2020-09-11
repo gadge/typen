@@ -1,4 +1,5 @@
 import { inferTypeNaive } from '@typen/infer-type'
+import { nullish }        from '@typen/nullish'
 import { iterate }        from '@vect/vector-mapper'
 
 /**
@@ -10,17 +11,17 @@ import { iterate }        from '@vect/vector-mapper'
 export const inferTypes = function (vec, l) {
   const inferType = this.inferType ?? inferTypeNaive
   const omitNull = this.omitNull
-  let o, nullish = null
+  let o, nullType = null
   const distinct = (l = vec?.length) === (l & 0x7f)
     ? (o = [], iterate(vec, x => {
-      if (omitNull && nullish(x)) nullish = x
+      if (omitNull && nullish(x)) nullType = x
       else if (o.indexOf(x = inferType(x)) < 0) o.push(x)
     }, l), o)
     : (o = {}, iterate(vec, x => {
-      if (omitNull && nullish(x)) nullish = x
+      if (omitNull && nullish(x)) nullType = x
       else if (!((x = inferType(x)) in o)) o[x] = void 0
     }, l), Object.keys(o))
-  return distinct.length ? distinct : [nullish]
+  return distinct.length ? distinct : [nullType]
 }
 
 /**

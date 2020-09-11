@@ -23,7 +23,5 @@ export function vectorType (vec) {
  * @param {boolean} [config.omitNull]
  * @return Function
  */
-export const VectorType = (config = {}) => {
-  return vectorType.bind(config)
-}
+export const VectorType = (config = {}) => vectorType.bind(config)
 

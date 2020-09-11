@@ -7,6 +7,8 @@ var enumTabularTypes = require('@typen/enum-tabular-types');
 var inferType = require('@typen/infer-type');
 var vectorMapper = require('@vect/vector-mapper');
 
+const nullish = x => x === null || x === void 0;
+
 /**
  *
  * @param {*[]} vec
@@ -20,13 +22,13 @@ const inferTypes = function (vec, l) {
   const inferType$1 = (_this$inferType = this.inferType) !== null && _this$inferType !== void 0 ? _this$inferType : inferType.inferTypeNaive;
   const omitNull = this.omitNull;
   let o,
-      nullish = null;
+      nullType = null;
   const distinct = (l = vec === null || vec === void 0 ? void 0 : vec.length) === (l & 0x7f) ? (o = [], vectorMapper.iterate(vec, x => {
-    if (omitNull && nullish(x)) nullish = x;else if (o.indexOf(x = inferType$1(x)) < 0) o.push(x);
+    if (omitNull && nullish(x)) nullType = x;else if (o.indexOf(x = inferType$1(x)) < 0) o.push(x);
   }, l), o) : (o = {}, vectorMapper.iterate(vec, x => {
-    if (omitNull && nullish(x)) nullish = x;else if (!((x = inferType$1(x)) in o)) o[x] = void 0;
+    if (omitNull && nullish(x)) nullType = x;else if (!((x = inferType$1(x)) in o)) o[x] = void 0;
   }, l), Object.keys(o));
-  return distinct.length ? distinct : [nullish];
+  return distinct.length ? distinct : [nullType];
 };
 /**
  *
@@ -62,9 +64,7 @@ function vectorType(vec) {
  * @return Function
  */
 
-const VectorType = (config = {}) => {
-  return vectorType.bind(config);
-};
+const VectorType = (config = {}) => vectorType.bind(config);
 
 exports.InferTypes = InferTypes;
 exports.VectorType = VectorType;

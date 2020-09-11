@@ -3,6 +3,8 @@ import { NUMSTR, MISC } from '@typen/enum-tabular-types';
 import { inferTypeNaive } from '@typen/infer-type';
 import { iterate } from '@vect/vector-mapper';
 
+const nullish = x => x === null || x === void 0;
+
 /**
  *
  * @param {*[]} vec
@@ -16,13 +18,13 @@ const inferTypes = function (vec, l) {
   const inferType = (_this$inferType = this.inferType) !== null && _this$inferType !== void 0 ? _this$inferType : inferTypeNaive;
   const omitNull = this.omitNull;
   let o,
-      nullish = null;
+      nullType = null;
   const distinct = (l = vec === null || vec === void 0 ? void 0 : vec.length) === (l & 0x7f) ? (o = [], iterate(vec, x => {
-    if (omitNull && nullish(x)) nullish = x;else if (o.indexOf(x = inferType(x)) < 0) o.push(x);
+    if (omitNull && nullish(x)) nullType = x;else if (o.indexOf(x = inferType(x)) < 0) o.push(x);
   }, l), o) : (o = {}, iterate(vec, x => {
-    if (omitNull && nullish(x)) nullish = x;else if (!((x = inferType(x)) in o)) o[x] = void 0;
+    if (omitNull && nullish(x)) nullType = x;else if (!((x = inferType(x)) in o)) o[x] = void 0;
   }, l), Object.keys(o));
-  return distinct.length ? distinct : [nullish];
+  return distinct.length ? distinct : [nullType];
 };
 /**
  *
@@ -58,8 +60,6 @@ function vectorType(vec) {
  * @return Function
  */
 
-const VectorType = (config = {}) => {
-  return vectorType.bind(config);
-};
+const VectorType = (config = {}) => vectorType.bind(config);
 
 export { InferTypes, VectorType, inferTypes, vectorType };
