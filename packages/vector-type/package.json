@@ -19,7 +19,7 @@
     "@typen/enum-tabular-types": "^0.1.9",
     "@typen/infer-type": "^0.1.9",
     "@typen/num-strict": "^0.1.9",
-    "@vect/vector-mapper": "^0.2.9"
+    "@vect/vector-mapper": "^0.2.10"
   },
   "repository": {
     "type": "git",
