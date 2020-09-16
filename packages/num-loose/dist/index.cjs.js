@@ -5,7 +5,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 var enumDataTypes = require('@typen/enum-data-types');
 var typ = require('@typen/typ');
 
-const isNumeric = x => !!(x = +x) || x === 0;
+const isNumeric = x => (x = +x) || x === 0;
 
 /**
  *

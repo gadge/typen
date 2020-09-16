@@ -1,4 +1,4 @@
-export const isNumeric = x => !!(x = +x) || x === 0
+export const isNumeric = x => (x = +x) || x === 0
 
 
 

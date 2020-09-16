@@ -1,7 +1,7 @@
 import { STR, NUM, OBJ } from '@typen/enum-data-types';
 import { typ } from '@typen/typ';
 
-const isNumeric = x => !!(x = +x) || x === 0;
+const isNumeric = x => (x = +x) || x === 0;
 
 /**
  *
