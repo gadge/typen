@@ -1,6 +1,5 @@
 import { OBJECT } from '@typen/enums'
 import { Chrono } from 'elprimero'
-import { CrosTabX } from 'xbrief'
 import { makeEmbedded } from '@foba/util'
 import { Basics, Objects } from '@typen/foobar'
 import { mapper } from '@vect/object-mapper'
