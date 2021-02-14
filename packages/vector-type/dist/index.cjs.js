@@ -49,7 +49,7 @@ const InferTypes = config => {
  */
 
 function vectorType(vec) {
-  if (!(vec === null || vec === void 0 ? void 0 : vec.length)) return enumDataTypes.NUL;
+  if (!(vec !== null && vec !== void 0 && vec.length)) return enumDataTypes.NUL;
   const config = this;
   const types = inferTypes.call(config, vec);
   if (types.length === 1) return types[0];

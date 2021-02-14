@@ -15,7 +15,7 @@ var enumDataTypes = require('@typen/enum-data-types');
 const bool = v => {
   var _v;
 
-  if (!((_v = v) === null || _v === void 0 ? void 0 : _v.length)) return false;
+  if (!((_v = v) !== null && _v !== void 0 && _v.length)) return false;
   if (typeof v === enumDataTypes.STR) return (v = v[0].toLowerCase()) !== 'f' && v !== 'n';
   return Boolean(v);
 };
