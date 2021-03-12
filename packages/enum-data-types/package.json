@@ -1,6 +1,6 @@
 {
   "name": "@typen/enum-data-types",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "A type cheker",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
