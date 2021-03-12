@@ -11,6 +11,6 @@ const isNumStr = x => {
 };
 const hasLiteral = x => isString(x) && isLiteral(x);
 const hasHan = x => isString(x) && isHan(x);
-const hasAlpAndHan = x => isString(x) && isLiteral(x) && isHan();
+const hasAlpHan = x => isString(x) && (isLiteral(x) || isHan(x));
 
-export { HAN, LITERAL, hasAlpAndHan, hasHan, hasLiteral, isHan, isLiteral, isNumStr, isString };
+export { HAN, LITERAL, hasAlpHan, hasHan, hasLiteral, isHan, isLiteral, isNumStr, isString };

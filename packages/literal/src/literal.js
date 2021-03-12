@@ -11,4 +11,4 @@ export const isNumStr = x => {
 }
 export const hasLiteral = x => isString(x) && isLiteral(x)
 export const hasHan = x => isString(x) && isHan(x)
-export const hasAlpAndHan = x => isString(x) && isLiteral(x) && isHan()
+export const hasAlpHan = x => isString(x) && (isLiteral(x) || isHan(x))

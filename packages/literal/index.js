@@ -6,6 +6,6 @@ export {
   isNumStr,
   hasLiteral,
   isHan,
-  hasAlpAndHan,
+  hasAlpHan,
   hasHan
 } from './src/literal'
