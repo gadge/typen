@@ -12,5 +12,4 @@ const candidates = {
 
 for (const [key, value] of Object.entries(candidates)) {
   `[${key}] (${value}) [isLiteral] (${isLiteral(value)}) (${String(value).search(LITERAL)})` |> logger
-
 }
