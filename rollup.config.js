@@ -15,6 +15,7 @@ const babelPluginOptions = {
   comments: true,
   sourceMap: true,
   exclude: 'node_modules/**',
+  babelHelpers: 'bundled',
   plugins: [
     ['@babel/plugin-transform-runtime', { helpers: false, }],
     ['@babel/plugin-proposal-pipeline-operator', { proposal: 'minimal' }],
