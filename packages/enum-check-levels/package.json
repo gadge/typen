@@ -1,6 +1,6 @@
 {
   "name": "@typen/enum-check-levels",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "Enum of check levels",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
