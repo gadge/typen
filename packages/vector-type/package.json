@@ -1,6 +1,6 @@
 {
   "name": "@typen/vector-type",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "Check type for array",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -15,10 +15,10 @@
     "test": "node -r @babel/register test/object.type.test.js"
   },
   "dependencies": {
-    "@typen/enum-data-types": "^0.1.11",
-    "@typen/enum-tabular-types": "^0.1.11",
-    "@typen/infer-type": "^0.1.11",
-    "@typen/num-strict": "^0.1.11",
+    "@typen/enum-data-types": "^0.1.12",
+    "@typen/enum-tabular-types": "^0.1.12",
+    "@typen/infer-type": "^0.1.12",
+    "@typen/num-strict": "^0.1.12",
     "@vect/vector-mapper": "^0.3.6"
   },
   "repository": {
