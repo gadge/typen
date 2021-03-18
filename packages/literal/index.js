@@ -1,11 +1,14 @@
 export {
-  HAN,
   LITERAL,
-  isLiteral,
-  isString,
+  LITERAL_FULL,
+  LITERAL_ANY,
   isNumStr,
+  isString,
+  isLiteral,
+  isLiteralFull,
+  isLiteralAny,
   hasLiteral,
-  isHan,
-  hasAlpHan,
-  hasHan
+  hasLiteralFull,
+  hasLiteralAny,
+  hasLiteralAny as hasAlpHan
 } from './src/literal'

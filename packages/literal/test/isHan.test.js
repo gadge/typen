@@ -1,5 +1,5 @@
-import { logger }     from '@spare/logger'
-import { HAN, isHan } from '../src/literal'
+import { logger }                      from '@spare/logger'
+import { LITERAL_FULL, isLiteralFull } from '../src/literal'
 
 const candidates = {
   und: undefined,
@@ -12,5 +12,5 @@ const candidates = {
 }
 
 for (const [key, value] of Object.entries(candidates)) {
-  `[${key}] (${value}) [isHan] (${isHan(value)}) (${String(value).search(HAN)})` |> logger
+  `[${key}] (${value}) [isHan] (${isLiteralFull(value)}) (${String(value).search(LITERAL_FULL)})` |> logger
 }
