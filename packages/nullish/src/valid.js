@@ -1,0 +1,1 @@
+export const valid = x => x !== null && x !== void 0
