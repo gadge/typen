@@ -1,6 +1,6 @@
 {
   "name": "@typen/num-strict",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "description": "A type cheker",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -15,8 +15,8 @@
     "test": "node -r @babel/register test/strategies.js"
   },
   "dependencies": {
-    "@typen/enum-data-types": "^0.1.16",
-    "@typen/typ": "^0.1.16"
+    "@typen/enum-data-types": "^0.1.17",
+    "@typen/typ": "^0.1.17"
   },
   "repository": {
     "type": "git",

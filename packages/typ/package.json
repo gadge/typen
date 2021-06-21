@@ -1,6 +1,6 @@
 {
   "name": "@typen/typ",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "description": "A type cheker",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
